@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Pong - VR #1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- TÍTULO PRINCIPAL -->
+        <h1>🎮 PONG GAME 🎮</h1>
+        <p class="subtitle">VR #1</p>
+
+        <!-- CANVAS DEL JUEGO -->
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
+
+        <!-- PUNTUACIÓN -->
+        <div class="score-container">
+            <div class="score-box">
+                <div class="score-label">Jugador 1</div>
+                <div class="score-value" id="score1">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">Jugador 2</div>
+                <div class="score-value" id="score2">0</div>
+            </div>
+        </div>
+
+        <!-- ESTADO DEL JUEGO -->
+        <div class="game-status" id="gameStatus">Presiona "Iniciar Juego" para comenzar</div>
+
+        <!-- BOTONES DE CONTROL -->
+        <div class="buttons-container">
+            <button class="btn-start" id="startBtn">Iniciar Juego</button>
+            <button class="btn-reset" id="resetBtn">Reiniciar Todo</button>
+        </div>
+
+        <!-- INSTRUCCIONES -->
+        <div class="instructions">
+            <h2>📋 Instrucciones de Juego</h2>
+            <div class="instructions-content">
+                <div class="player-info">
+                    <h3>🕹️ Jugador 1 (Izquierda)</h3>
+                    <p><strong>Arriba:</strong> Flecha ⬆️</p>
+                    <p><strong>Abajo:</strong> Flecha ⬇️</p>
+                </div>
+                <div class="player-info">
+                    <h3>🕹️ Jugador 2 (Derecha)</h3>
+                    <p><strong>Arriba:</strong> Tecla A</p>
+                    <p><strong>Abajo:</strong> Tecla Z</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px; text-align: center; color: #d0d0d0;">
+                ¡El primero en llegar a 11 puntos gana! La bola se reinicia después de cada punto.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
