@@ -1,0 +1,226 @@
+/* =================================
+   ESTILOS GENERALES Y RESET
+   ================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* =================================
+   CONTENEDOR PRINCIPAL
+   ================================= */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =================================
+   ENCABEZADO
+   ================================= */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #d0d0d0;
+}
+
+/* =================================
+   FORMULARIO DE CONTACTO
+   ================================= */
+.contact-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 550px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #00ff88;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1.5px solid #00ff88;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+    border-color: #00ff88;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    padding: 13px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: #00ff88;
+    color: #1e3c72;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #00cc6f;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.form-message.success {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    border: 1.5px solid #00ff88;
+    display: block;
+}
+
+.form-message.error {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1.5px solid #ff6b6b;
+    display: block;
+}
+
+/* =================================
+   ENLACE DE REGRESO
+   ================================= */
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #00ff88;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 2px solid #00ff88;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.back-link a:hover {
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateX(-5px);
+}
+
+/* =================================
+   ANIMACIONES
+   ================================= */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .form-group {
+        gap: 5px;
+    }
+
+    .btn-submit {
+        padding: 11px 25px;
+    }
+}

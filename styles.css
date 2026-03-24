@@ -177,6 +177,27 @@ button {
     box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
 }
 
+.btn-contact {
+    background: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #5f3dc4;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+}
+
 /* =================================
    ESTADO DEL JUEGO
    ================================= */
@@ -187,6 +208,120 @@ button {
     font-weight: bold;
     text-align: center;
     min-height: 30px;
+}
+
+/* =================================
+   FORMULARIO DE CONTACTO
+   ================================= */
+.contact-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    padding: 20px 30px;
+    max-width: 500px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form-container h2 {
+    color: #00ff88;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #00ff88;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    border-color: #00ff88;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: #00ff88;
+    color: #1e3c72;
+}
+
+.btn-submit:hover {
+    background: #00cc6f;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.form-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+    display: none;
+}
+
+.form-message.success {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    display: block;
+}
+
+.form-message.error {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    display: block;
 }
 
 /* =================================
